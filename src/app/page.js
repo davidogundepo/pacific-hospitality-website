@@ -200,8 +200,8 @@ export default function HomePage() {
       </section>
 
       {/* ============ PPM CONNECT TEASER ============ */}
-      <section className="section section-dark">
-        <div className="container">
+      <section className="section section-dark" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={styles.ppmGrid}>
             <AnimatedSection className={styles.ppmContent}>
               <span className="badge badge-light">Coming Soon</span>
@@ -242,12 +242,16 @@ export default function HomePage() {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
             </AnimatedSection>
-
-            <AnimatedSection className={styles.ppmVisual}>
-              <img src="/images/Ppm_connect_teaser_202602192312.jpeg" alt="PPM Connect App Interface" className={styles.ppmTeaserImg} />
-            </AnimatedSection>
+            
+            {/* Empty div for grid spacing to push text left */}
+            <div></div>
           </div>
         </div>
+
+        {/* Absolute full-bleed image on the right */}
+        <AnimatedSection className={styles.ppmVisual}>
+          <img src="/images/Ppm_connect_teaser_202602192312.jpeg" alt="PPM Connect App Interface" className={styles.ppmTeaserImg} />
+        </AnimatedSection>
       </section>
 
       {/* ============ PORTFOLIO PREVIEW ============ */}
