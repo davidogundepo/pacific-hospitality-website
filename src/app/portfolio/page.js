@@ -24,7 +24,7 @@ const properties = [
     location: 'Ikoyi, Lagos',
     type: 'Residential',
     units: 48,
-    image: '/images/A_stunning_exterior_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
     features: ['24/7 Security', 'Gym & Pool', 'Smart Home Ready', 'Backup Power'],
   },
   {
@@ -33,7 +33,7 @@ const properties = [
     location: 'Victoria Island, Lagos',
     type: 'Mixed-Use',
     units: 120,
-    image: '/images/A_commanding_view_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
     features: ['Commercial Spaces', 'Rooftop Lounge', 'Concierge', 'Parking'],
   },
   {
@@ -42,7 +42,7 @@ const properties = [
     location: 'Lekki Phase 1, Lagos',
     type: 'Luxury Villa',
     units: 24,
-    image: '/images/A_stunning_exterior_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
     features: ['Private Gardens', 'Smart Security', 'Premium Finishes', 'Staff Quarters'],
   },
   {
@@ -51,7 +51,7 @@ const properties = [
     location: 'Banana Island, Lagos',
     type: 'Ultra Premium',
     units: 16,
-    image: '/images/A_stunning_exterior_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',
     features: ['Waterfront Views', 'Private Jetty', 'Cinema Room', 'Wine Cellar'],
   },
   {
@@ -60,7 +60,7 @@ const properties = [
     location: 'Ikoyi, Lagos',
     type: 'Residential',
     units: 36,
-    image: '/images/A_stunning_exterior_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80',
     features: ['Gym & Spa', 'Children Play Area', 'EV Charging', 'Fiber Optic'],
   },
   {
@@ -69,7 +69,7 @@ const properties = [
     location: 'Victoria Island, Lagos',
     type: 'Commercial',
     units: 64,
-    image: '/images/A_commanding_view_202602192313.jpeg',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     features: ['Grade-A Office', 'Conference Rooms', 'Cafeteria', 'Generator Backup'],
   },
 ];
