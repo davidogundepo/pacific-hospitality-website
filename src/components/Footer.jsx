@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
           <div className={styles.ctaActions}>
             <Link href="/contact" className="btn btn-primary btn-lg">Get Started</Link>
-            <Link href="/about" className="btn btn-outline btn-lg">Meet The Team</Link>
+            <Link href="/about" className="btn btn-secondary btn-lg">Meet The Team</Link>
           </div>
         </div>
 
