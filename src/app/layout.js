@@ -11,7 +11,7 @@ export const metadata = {
     siteName: 'Pacific Hospitality Company',
     images: [
       {
-        url: '/images/Homepage_hero_section_202602192312.jpeg',
+        url: '/images/Resident_experience_day_202602192312.jpeg',
         width: 1200,
         height: 630,
         alt: 'Pacific Hospitality Website Banner',
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pacific Hospitality Company',
     description: 'Technology-enabled property management redefining Grade-A asset stewardship in Lagos, Nigeria.',
-    images: ['/images/Homepage_hero_section_202602192312.jpeg'],
+    images: ['/images/Resident_experience_day_202602192312.jpeg'],
   },
 };
 
