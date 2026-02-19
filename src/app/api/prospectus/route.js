@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pacific Partnerships <onboarding@resend.dev>';
+const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pacific Partnerships <info@momms.co.uk>';
 
 const adminEmails = ['Ayomide@redtechafrica.com', 'Dolapo@redtechafrica.com'];
 const ccEmails = ['david.oludepo@gmail.com', 'Olu@redtechafrica.com'];
