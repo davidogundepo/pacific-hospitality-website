@@ -11,7 +11,7 @@ export const metadata = {
     siteName: 'Pacific Hospitality Company',
     images: [
       {
-        url: '/images/custom-og.png',
+        url: 'https://pacifyme.vercel.app/images/custom-og.png',
         width: 1200,
         height: 630,
         alt: 'Pacific Hospitality Website Banner',
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pacific Hospitality Company',
     description: 'Technology-enabled property management redefining Grade-A asset stewardship in Lagos, Nigeria.',
-    images: ['/images/custom-og.png'],
+    images: ['https://pacifyme.vercel.app/images/custom-og.png'],
   },
 };
 
