@@ -4,8 +4,8 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pacific Partnerships <onboarding@resend.dev>';
 
-const adminEmails = ['david.oludepo@gmail.com', 'Dolapo@redtechafrica.com'];
-const ccEmails = ['Ayomide@redtechafrica.com', 'Olu@redtechafrica.com'];
+const adminEmails = ['Ayomide@redtechafrica.com', 'Dolapo@redtechafrica.com'];
+const ccEmails = ['david.oludepo@gmail.com', 'Olu@redtechafrica.com'];
 
 export async function POST(req) {
   try {
