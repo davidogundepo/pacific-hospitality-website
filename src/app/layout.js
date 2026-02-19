@@ -7,11 +7,11 @@ export const metadata = {
   openGraph: {
     title: 'Pacific Hospitality Company',
     description: 'The future of prop-tech management in Nigeria.',
-    url: 'https://pacifichospitality.vercel.app',
+    url: 'https://pacifyme.vercel.app',
     siteName: 'Pacific Hospitality Company',
     images: [
       {
-        url: '/images/Resident_experience_day_202602192312.jpeg',
+        url: '/images/custom-og.png',
         width: 1200,
         height: 630,
         alt: 'Pacific Hospitality Website Banner',
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pacific Hospitality Company',
     description: 'Technology-enabled property management redefining Grade-A asset stewardship in Lagos, Nigeria.',
-    images: ['/images/Resident_experience_day_202602192312.jpeg'],
+    images: ['/images/custom-og.png'],
   },
 };
 
