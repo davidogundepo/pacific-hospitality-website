@@ -78,7 +78,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.storyImage}>
               <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                src="/images/About_section_intro_202602192312.jpeg"
                 alt="Modern corporate office"
               />
             </div>

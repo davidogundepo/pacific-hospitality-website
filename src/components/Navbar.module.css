@@ -38,6 +38,8 @@
   width: auto;
   object-fit: contain;
   transition: filter 350ms ease;
+  transform: scale(1.5);
+  transform-origin: left center;
 }
 
 .header:not(.scrolled) .logoImg {

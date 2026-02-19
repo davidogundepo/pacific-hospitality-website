@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutImage}>
               <img
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+                src="/images/About_section_intro_202602192312.jpeg"
                 alt="Premium apartment building"
               />
               <div className={styles.aboutImageAccent} />
@@ -244,41 +244,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection className={styles.ppmVisual}>
-              <div className={styles.ppmPhone}>
-                <div className={styles.ppmPhoneScreen}>
-                  <div className={styles.ppmPhoneHeader}>
-                    <div className={styles.ppmPhoneNotch} />
-                    <span>PPM Connect</span>
-                  </div>
-                  <div className={styles.ppmPhoneContent}>
-                    <div className={styles.ppmPhoneCard}>
-                      <span className={styles.ppmCardLabel}>Maintenance Request</span>
-                      <span className={styles.ppmCardStatus}>In Progress</span>
-                      <div className={styles.ppmProgressBar}>
-                        <div className={styles.ppmProgressFill} style={{ width: '65%' }} />
-                      </div>
-                    </div>
-                    <div className={styles.ppmPhoneCard}>
-                      <span className={styles.ppmCardLabel}>Security Alert</span>
-                      <span className={styles.ppmCardStatusGreen}>All Clear</span>
-                    </div>
-                    <div className={styles.ppmPhoneCard}>
-                      <span className={styles.ppmCardLabel}>Electricity Usage</span>
-                      <span className={styles.ppmCardValue}>243 kWh</span>
-                      <div className={styles.ppmMiniChart}>
-                        <div style={{ height: '40%' }} />
-                        <div style={{ height: '65%' }} />
-                        <div style={{ height: '45%' }} />
-                        <div style={{ height: '80%' }} />
-                        <div style={{ height: '55%' }} />
-                        <div style={{ height: '70%' }} />
-                        <div style={{ height: '60%' }} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.ppmGlow} />
+              <img src="/images/Ppm_connect_teaser_202602192312.jpeg" alt="PPM Connect App Interface" className={styles.ppmTeaserImg} />
             </AnimatedSection>
           </div>
         </div>
@@ -297,7 +263,7 @@ export default function HomePage() {
           <div className={styles.portfolioGrid}>
             <AnimatedSection className={styles.portfolioItem}>
               <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80"
+                src="/images/A_stunning_exterior_202602192313.jpeg"
                 alt="Luxury residence Lagos"
               />
               <div className={styles.portfolioOverlay}>
@@ -308,7 +274,7 @@ export default function HomePage() {
             </AnimatedSection>
             <AnimatedSection className={styles.portfolioItem}>
               <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
+                src="/images/A_commanding_view_202602192313.jpeg"
                 alt="Modern apartment complex"
               />
               <div className={styles.portfolioOverlay}>
@@ -319,7 +285,7 @@ export default function HomePage() {
             </AnimatedSection>
             <AnimatedSection className={styles.portfolioItem}>
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+                src="/images/A_stunning_exterior_202602192313.jpeg"
                 alt="Premium villa"
               />
               <div className={styles.portfolioOverlay}>

@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80') center/cover no-repeat;
+  background: url('/images/Homepage_hero_section_202602192312.jpeg') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -404,88 +404,20 @@
   color: var(--warm-gray-300);
 }
 
-/* PPM Phone Mockup */
 .ppmVisual {
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.ppmPhone {
-  width: 280px;
-  background: var(--charcoal);
-  border-radius: 32px;
-  padding: 8px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+.ppmTeaserImg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   animation: float 6s ease-in-out infinite;
-}
-
-.ppmPhoneScreen {
-  background: var(--rich-black);
-  border-radius: 24px;
-  overflow: hidden;
-  min-height: 480px;
-}
-
-.ppmPhoneHeader {
-  background: linear-gradient(135deg, var(--burgundy), var(--burnt-orange));
-  padding: 1.5rem 1.25rem 1rem;
-  text-align: center;
-  position: relative;
-}
-
-.ppmPhoneNotch {
-  width: 100px;
-  height: 24px;
-  background: var(--rich-black);
-  border-radius: 0 0 12px 12px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ppmPhoneHeader span {
-  color: var(--white);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.ppmPhoneContent {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.ppmPhoneCard {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 1rem;
-}
-
-.ppmCardLabel {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--warm-gray-400);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
-}
-
-.ppmCardStatus {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--burnt-orange-light);
-  background: rgba(212, 102, 43, 0.15);
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  object-fit: contain;
 }
 
 .ppmCardStatusGreen {

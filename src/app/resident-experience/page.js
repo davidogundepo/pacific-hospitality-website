@@ -82,7 +82,7 @@ export default function ResidentExperiencePage() {
             </div>
             <div className={styles.introImage}>
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+                src="/images/Resident_experience_day_202602192312.jpeg"
                 alt="Luxury living room interior"
               />
             </div>

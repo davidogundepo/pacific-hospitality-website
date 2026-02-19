@@ -10,7 +10,6 @@ const navLinks = [
   { href: '/partnerships', label: 'Partnerships' },
   { href: '/resident-experience', label: 'Residents' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {

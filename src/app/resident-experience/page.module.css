@@ -10,7 +10,7 @@
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80') center/cover no-repeat;
+  background: url('/images/Resident_experience_day_202602192312.jpeg') center/cover no-repeat;
 }
 .hero::before {
   content: '';

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -73,6 +73,29 @@ const features = [
 ];
 
 export default function PPMConnectPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle');
+
+  const handleWaitlistSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <>
       {/* HERO */}
@@ -198,18 +221,21 @@ export default function PPMConnectPage() {
             <span className="badge">Coming Soon</span>
             <h2>Be the First to Experience PPM Connect</h2>
             <p>Join our exclusive waitlist and get early access when we launch. Be part of the prop-tech revolution.</p>
-            <form className={styles.waitlistForm} onSubmit={(e) => e.preventDefault()}>
+            <form className={styles.waitlistForm} onSubmit={handleWaitlistSubmit}>
               <input
                 type="email"
                 className="input"
                 placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button type="submit" className="btn btn-primary btn-lg">
-                Join Waitlist
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="submit" className="btn btn-primary btn-lg" disabled={status === 'loading'}>
+                {status === 'loading' ? 'Joining...' : status === 'success' ? 'Joined!' : 'Join Waitlist'}
+                {status === 'idle' && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>}
               </button>
             </form>
+            {status === 'error' && <p style={{color: 'var(--burnt-orange)', marginTop: '1rem', fontSize: '0.9rem'}}>An error occurred. Please try again later.</p>}
             <p className={styles.waitlistNote}>We respect your privacy. No spam, ever.</p>
           </AnimatedSection>
         </div>

@@ -37,11 +37,26 @@ const models = [
 
 export default function PartnershipsPage() {
   const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
+  const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your interest! Our partnership team will be in touch within 48 hours.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/prospectus', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, interest: formData.message }),
+      });
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -75,7 +90,7 @@ export default function PartnershipsPage() {
             </div>
             <div className={styles.whyImage}>
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
+                src="/images/Partnerships_portal_hero_202602192312.jpeg"
                 alt="Business partnership meeting"
               />
             </div>
@@ -182,10 +197,11 @@ export default function PartnershipsPage() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
               </div>
-              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }}>
-                Request Prospectus
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={status === 'loading'}>
+                {status === 'loading' ? 'Submitting...' : status === 'success' ? 'Prospectus Requested!' : 'Request Prospectus'}
+                {status === 'idle' && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>}
               </button>
+              {status === 'error' && <p style={{color: 'var(--burnt-orange)', marginTop: '1rem', fontSize: '0.9rem'}}>An error occurred. Please try again later.</p>}
             </form>
           </AnimatedSection>
         </div>

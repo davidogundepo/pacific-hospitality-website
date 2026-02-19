@@ -19,11 +19,26 @@ function AnimatedSection({ children, className = '' }) {
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for reaching out! We will get back to you within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -143,10 +158,11 @@ export default function ContactPage() {
                 <label>Message *</label>
                 <textarea className="textarea" placeholder="Tell us how we can help you..." value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} required />
               </div>
-              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }}>
-                Send Message
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={status === 'loading'}>
+                {status === 'loading' ? 'Sending...' : status === 'success' ? 'Message Sent!' : 'Send Message'}
+                {status === 'idle' && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>}
               </button>
+              {status === 'error' && <p style={{color: 'var(--burnt-orange)', marginTop: '1rem', fontSize: '0.9rem'}}>An error occurred. Please try again later.</p>}
             </form>
           </AnimatedSection>
         </div>

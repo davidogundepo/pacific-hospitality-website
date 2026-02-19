@@ -69,8 +69,8 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>© {currentYear} Pacific Hospitality Company. All rights reserved.</p>
           <div className={styles.bottomLinks}>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
       </div>
